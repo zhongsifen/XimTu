@@ -13,18 +13,18 @@
 		8C79A9AC1FD3B17A0060B19F /* match.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C79A9981FD3B17A0060B19F /* match.h */; };
 		8C79A9AF1FD3B17A0060B19F /* qrsdet.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C79A99B1FD3B17A0060B19F /* qrsdet.h */; };
 		8C79A9B01FD3B17A0060B19F /* analbeat.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C79A99C1FD3B17A0060B19F /* analbeat.h */; };
-		8C79A9B11FD3B17A0060B19F /* inputs.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C79A99D1FD3B17A0060B19F /* inputs.h */; };
-		8C79A9B61FD3BC960060B19F /* qrsfilt.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A9991FD3B17A0060B19F /* qrsfilt.c */; };
-		8C79A9B71FD3BCAD0060B19F /* qrsdet.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A98F1FD3B17A0060B19F /* qrsdet.c */; };
-		8C79A9B81FD3F48C0060B19F /* postclas.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A98B1FD3B17A0060B19F /* postclas.c */; };
-		8C79A9B91FD3F48C0060B19F /* match.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A98C1FD3B17A0060B19F /* match.c */; };
-		8C79A9BA1FD3F48C0060B19F /* noisechk.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A9921FD3B17A0060B19F /* noisechk.c */; };
-		8C79A9BB1FD3F48C0060B19F /* classify.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A9931FD3B17A0060B19F /* classify.c */; };
-		8C79A9BC1FD3F48C0060B19F /* analbeat.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A9951FD3B17A0060B19F /* analbeat.c */; };
-		8C79A9BD1FD3F48C0060B19F /* bdac.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A9961FD3B17A0060B19F /* bdac.c */; };
-		8C79A9BE1FD3F5270060B19F /* rythmchk.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A99E1FD3B17A0060B19F /* rythmchk.c */; };
+		8C79A9B11FD3B17A0060B19F /* inputs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8C79A99D1FD3B17A0060B19F /* inputs.hpp */; };
+		8C79A9B61FD3BC960060B19F /* qrsfilt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A9991FD3B17A0060B19F /* qrsfilt.cpp */; };
+		8C79A9B71FD3BCAD0060B19F /* qrsdet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A98F1FD3B17A0060B19F /* qrsdet.cpp */; };
+		8C79A9B81FD3F48C0060B19F /* postclas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A98B1FD3B17A0060B19F /* postclas.cpp */; };
+		8C79A9B91FD3F48C0060B19F /* match.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A98C1FD3B17A0060B19F /* match.cpp */; };
+		8C79A9BA1FD3F48C0060B19F /* noisechk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A9921FD3B17A0060B19F /* noisechk.cpp */; };
+		8C79A9BB1FD3F48C0060B19F /* classify.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A9931FD3B17A0060B19F /* classify.cpp */; };
+		8C79A9BC1FD3F48C0060B19F /* analbeat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A9951FD3B17A0060B19F /* analbeat.cpp */; };
+		8C79A9BD1FD3F48C0060B19F /* bdac.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A9961FD3B17A0060B19F /* bdac.cpp */; };
+		8C79A9BE1FD3F5270060B19F /* rythmchk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A99E1FD3B17A0060B19F /* rythmchk.cpp */; };
 		8C79A9C61FD3F83E0060B19F /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A9C51FD3F83E0060B19F /* main.cpp */; };
-		8C79A9CE1FD3F9640060B19F /* easytest.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A9CB1FD3F9260060B19F /* easytest.c */; };
+		8C79A9CE1FD3F9640060B19F /* easytest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8C79A9CB1FD3F9260060B19F /* easytest.cpp */; };
 		8CD816FE1FD4016900F1784B /* libXimTu.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C79A9831FD3B0330060B19F /* libXimTu.dylib */; };
 		8CD816FF1FD4027B00F1784B /* libwfdb.10.5.24.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C79A9B41FD3B7E40060B19F /* libwfdb.10.5.24.dylib */; };
 /* End PBXBuildFile section */
@@ -43,27 +43,27 @@
 
 /* Begin PBXFileReference section */
 		8C79A9831FD3B0330060B19F /* libXimTu.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libXimTu.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		8C79A98B1FD3B17A0060B19F /* postclas.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = postclas.c; sourceTree = "<group>"; };
-		8C79A98C1FD3B17A0060B19F /* match.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = match.c; sourceTree = "<group>"; };
+		8C79A98B1FD3B17A0060B19F /* postclas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = postclas.cpp; sourceTree = "<group>"; };
+		8C79A98C1FD3B17A0060B19F /* match.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = match.cpp; sourceTree = "<group>"; };
 		8C79A98E1FD3B17A0060B19F /* bdac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bdac.h; sourceTree = "<group>"; };
-		8C79A98F1FD3B17A0060B19F /* qrsdet.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrsdet.c; sourceTree = "<group>"; };
-		8C79A9921FD3B17A0060B19F /* noisechk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = noisechk.c; sourceTree = "<group>"; };
-		8C79A9931FD3B17A0060B19F /* classify.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = classify.c; sourceTree = "<group>"; };
+		8C79A98F1FD3B17A0060B19F /* qrsdet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qrsdet.cpp; sourceTree = "<group>"; };
+		8C79A9921FD3B17A0060B19F /* noisechk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = noisechk.cpp; sourceTree = "<group>"; };
+		8C79A9931FD3B17A0060B19F /* classify.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = classify.cpp; sourceTree = "<group>"; };
 		8C79A9941FD3B17A0060B19F /* rythmchk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rythmchk.h; sourceTree = "<group>"; };
-		8C79A9951FD3B17A0060B19F /* analbeat.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = analbeat.c; sourceTree = "<group>"; };
-		8C79A9961FD3B17A0060B19F /* bdac.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = bdac.c; sourceTree = "<group>"; };
+		8C79A9951FD3B17A0060B19F /* analbeat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = analbeat.cpp; sourceTree = "<group>"; };
+		8C79A9961FD3B17A0060B19F /* bdac.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = bdac.cpp; sourceTree = "<group>"; };
 		8C79A9971FD3B17A0060B19F /* postclas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = postclas.h; sourceTree = "<group>"; };
 		8C79A9981FD3B17A0060B19F /* match.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = match.h; sourceTree = "<group>"; };
-		8C79A9991FD3B17A0060B19F /* qrsfilt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrsfilt.c; sourceTree = "<group>"; };
-		8C79A99A1FD3B17A0060B19F /* qrsdet2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = qrsdet2.c; sourceTree = "<group>"; };
+		8C79A9991FD3B17A0060B19F /* qrsfilt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qrsfilt.cpp; sourceTree = "<group>"; };
+		8C79A99A1FD3B17A0060B19F /* qrsdet2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qrsdet2.cpp; sourceTree = "<group>"; };
 		8C79A99B1FD3B17A0060B19F /* qrsdet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = qrsdet.h; sourceTree = "<group>"; };
 		8C79A99C1FD3B17A0060B19F /* analbeat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = analbeat.h; sourceTree = "<group>"; };
-		8C79A99D1FD3B17A0060B19F /* inputs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = inputs.h; sourceTree = "<group>"; };
-		8C79A99E1FD3B17A0060B19F /* rythmchk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rythmchk.c; sourceTree = "<group>"; };
+		8C79A99D1FD3B17A0060B19F /* inputs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = inputs.hpp; sourceTree = "<group>"; };
+		8C79A99E1FD3B17A0060B19F /* rythmchk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rythmchk.cpp; sourceTree = "<group>"; };
 		8C79A9B41FD3B7E40060B19F /* libwfdb.10.5.24.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libwfdb.10.5.24.dylib; path = ../../../../usr/local/lib/libwfdb.10.5.24.dylib; sourceTree = "<group>"; };
 		8C79A9C31FD3F83E0060B19F /* appXimTu */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = appXimTu; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C79A9C51FD3F83E0060B19F /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		8C79A9CB1FD3F9260060B19F /* easytest.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = easytest.c; path = appXimTu/easytest.c; sourceTree = SOURCE_ROOT; };
+		8C79A9CB1FD3F9260060B19F /* easytest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = easytest.cpp; path = appXimTu/easytest.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,23 +108,23 @@
 		8C79A98A1FD3B17A0060B19F /* XimTu */ = {
 			isa = PBXGroup;
 			children = (
-				8C79A98B1FD3B17A0060B19F /* postclas.c */,
-				8C79A98C1FD3B17A0060B19F /* match.c */,
+				8C79A98B1FD3B17A0060B19F /* postclas.cpp */,
+				8C79A98C1FD3B17A0060B19F /* match.cpp */,
 				8C79A98E1FD3B17A0060B19F /* bdac.h */,
-				8C79A98F1FD3B17A0060B19F /* qrsdet.c */,
-				8C79A9921FD3B17A0060B19F /* noisechk.c */,
-				8C79A9931FD3B17A0060B19F /* classify.c */,
+				8C79A98F1FD3B17A0060B19F /* qrsdet.cpp */,
+				8C79A9921FD3B17A0060B19F /* noisechk.cpp */,
+				8C79A9931FD3B17A0060B19F /* classify.cpp */,
 				8C79A9941FD3B17A0060B19F /* rythmchk.h */,
-				8C79A9951FD3B17A0060B19F /* analbeat.c */,
-				8C79A9961FD3B17A0060B19F /* bdac.c */,
+				8C79A9951FD3B17A0060B19F /* analbeat.cpp */,
+				8C79A9961FD3B17A0060B19F /* bdac.cpp */,
 				8C79A9971FD3B17A0060B19F /* postclas.h */,
 				8C79A9981FD3B17A0060B19F /* match.h */,
-				8C79A9991FD3B17A0060B19F /* qrsfilt.c */,
-				8C79A99A1FD3B17A0060B19F /* qrsdet2.c */,
+				8C79A9991FD3B17A0060B19F /* qrsfilt.cpp */,
+				8C79A99A1FD3B17A0060B19F /* qrsdet2.cpp */,
 				8C79A99B1FD3B17A0060B19F /* qrsdet.h */,
 				8C79A99C1FD3B17A0060B19F /* analbeat.h */,
-				8C79A99D1FD3B17A0060B19F /* inputs.h */,
-				8C79A99E1FD3B17A0060B19F /* rythmchk.c */,
+				8C79A99D1FD3B17A0060B19F /* inputs.hpp */,
+				8C79A99E1FD3B17A0060B19F /* rythmchk.cpp */,
 			);
 			path = XimTu;
 			sourceTree = "<group>";
@@ -140,7 +140,7 @@
 		8C79A9C41FD3F83E0060B19F /* appXimTu */ = {
 			isa = PBXGroup;
 			children = (
-				8C79A9CB1FD3F9260060B19F /* easytest.c */,
+				8C79A9CB1FD3F9260060B19F /* easytest.cpp */,
 				8C79A9C51FD3F83E0060B19F /* main.cpp */,
 			);
 			path = appXimTu;
@@ -159,7 +159,7 @@
 				8C79A9AB1FD3B17A0060B19F /* postclas.h in Headers */,
 				8C79A9B01FD3B17A0060B19F /* analbeat.h in Headers */,
 				8C79A9AF1FD3B17A0060B19F /* qrsdet.h in Headers */,
-				8C79A9B11FD3B17A0060B19F /* inputs.h in Headers */,
+				8C79A9B11FD3B17A0060B19F /* inputs.hpp in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,15 +242,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C79A9BE1FD3F5270060B19F /* rythmchk.c in Sources */,
-				8C79A9B81FD3F48C0060B19F /* postclas.c in Sources */,
-				8C79A9B91FD3F48C0060B19F /* match.c in Sources */,
-				8C79A9BA1FD3F48C0060B19F /* noisechk.c in Sources */,
-				8C79A9BB1FD3F48C0060B19F /* classify.c in Sources */,
-				8C79A9BC1FD3F48C0060B19F /* analbeat.c in Sources */,
-				8C79A9BD1FD3F48C0060B19F /* bdac.c in Sources */,
-				8C79A9B71FD3BCAD0060B19F /* qrsdet.c in Sources */,
-				8C79A9B61FD3BC960060B19F /* qrsfilt.c in Sources */,
+				8C79A9BE1FD3F5270060B19F /* rythmchk.cpp in Sources */,
+				8C79A9B81FD3F48C0060B19F /* postclas.cpp in Sources */,
+				8C79A9B91FD3F48C0060B19F /* match.cpp in Sources */,
+				8C79A9BA1FD3F48C0060B19F /* noisechk.cpp in Sources */,
+				8C79A9BB1FD3F48C0060B19F /* classify.cpp in Sources */,
+				8C79A9BC1FD3F48C0060B19F /* analbeat.cpp in Sources */,
+				8C79A9BD1FD3F48C0060B19F /* bdac.cpp in Sources */,
+				8C79A9B71FD3BCAD0060B19F /* qrsdet.cpp in Sources */,
+				8C79A9B61FD3BC960060B19F /* qrsfilt.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,7 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C79A9C61FD3F83E0060B19F /* main.cpp in Sources */,
-				8C79A9CE1FD3F9640060B19F /* easytest.c in Sources */,
+				8C79A9CE1FD3F9640060B19F /* easytest.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

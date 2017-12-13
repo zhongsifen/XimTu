@@ -8,10 +8,8 @@
 
 #include <iostream>
 
-extern "C" {
 void easytest();
 void bxbep();
-}
 
 int main(int argc, const char * argv[]) {
 	easytest();

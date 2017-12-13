@@ -74,7 +74,7 @@ This file must be linked with object files produced from:
 #include "stdio.h"
 #include "qrsdet.h"		// For sample rate.
 
-#include "inputs.h"	/* list of records to analyze and definitions of
+#include "inputs.hpp"	/* list of records to analyze and definitions of
 			   ECG_DB_PATH and REC_COUNT */
 
 // External function prototypes.
