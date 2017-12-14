@@ -54,7 +54,7 @@ Functions in bdac.cpp require functions in the following files:
          and BEAT_SAMPLE_RATE in bcac.h.
 
 *******************************************************************************/
-#include "qrsdet.h"	// For base SAMPLE_RATE
+#include "samplerate.hpp"	// For base SAMPLE_RATE
 #include "bdac.hpp"
 
 #define ECG_BUFFER_LENGTH	1000	// Should be long enough for a beat
@@ -90,6 +90,10 @@ void DownSampleBeat(int *beatOut, int *beatIn)
 	
 	for(i = 0; i < BEATLGTH; ++i)
 		beatOut[i] = (beatIn[i<<1]+beatIn[(i<<1)+1])>>1;
+}
+
+Bdac::Bdac() {
+	ResetBDAC();
 }
 
 /******************************************************************************

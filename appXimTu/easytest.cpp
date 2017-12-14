@@ -72,7 +72,7 @@ This file must be linked with object files produced from:
 #include <wfdb/ecgcodes.h>
 #include <wfdb/ecgmap.h>
 #include "stdio.h"
-#include "qrsdet.h"		// For sample rate.
+#include "samplerate.hpp"		// For sample rate.
 
 #include "inputs.hpp"	/* list of records to analyze and definitions of
 			   ECG_DB_PATH and REC_COUNT */

@@ -59,7 +59,7 @@ Returns:
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
-#include "qrsdet.h"
+#include "samplerate.hpp"
 #include "qrsfilt.hpp"
 #define PRE_BLANK	MS200
 

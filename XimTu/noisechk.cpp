@@ -33,7 +33,7 @@ This file contains functions for evaluating the noise content of a beat.
 *****************************************************************************/
 
 #include <stdlib.h>
-#include "qrsdet.h"
+#include "samplerate.hpp"
 
 #define NB_LENGTH	MS1500
 #define NS_LENGTH	MS50

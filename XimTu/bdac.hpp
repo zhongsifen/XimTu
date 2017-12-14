@@ -57,6 +57,7 @@ MA 02143 USA).  For updates to this software, please visit our website
 class Bdac {
 
 public:
+	Bdac();
 	void ResetBDAC();
 	int BeatDetectAndClassify(int ecgSample, int *beatType, int *beatMatch);
 };

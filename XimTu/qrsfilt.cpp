@@ -37,7 +37,7 @@ MA 02143 USA).  For updates to this software, please visit our website
 #include "qrsfilt.hpp"
 #include <math.h>
 #include <stdlib.h>
-#include "qrsdet.h"
+#include "samplerate.hpp"
 
 QrsFilt::QrsFilt() {
 	lpfilt( 0, 1 ) ;

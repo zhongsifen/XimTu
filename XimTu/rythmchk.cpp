@@ -45,7 +45,7 @@ MA 02143 USA).  For updates to this software, please visit our website
 
 **************************************************************************/
 
-#include "qrsdet.h"		// For time intervals.
+#include "samplerate.hpp"		// For time intervals.
 #include <wfdb/ecgcodes.h>	// Defines codes of NORMAL, PVC, and UNKNOWN.
 #include <stdlib.h>		// For abs()
 
