@@ -56,23 +56,12 @@ Returns:
 
 ****************************************************************/
 
-/* For memmove. */
-#ifdef __STDC__
 #include <string.h>
-#else
-#include <mem.h>
-#endif
-
 #include <stdlib.h>
 #include <math.h>
 #include "qrsdet.h"
+#include "qrsfilt.hpp"
 #define PRE_BLANK	MS200
-
-
-// External Prototypes.
-
-int QRSFilter(int datum, int init) ;
-int deriv1( int x0, int init ) ;
 
 // Local Prototypes.
 
@@ -104,6 +93,7 @@ int QRSDet( int datum, int init )
 	
 	int fdatum, QrsDelay = 0 ;
 	int i, newPeak, aPeak ;
+		QrsFilt filt;
 
 /*	Initialize all buffers to 0 on the first call.	*/
 
@@ -118,11 +108,11 @@ int QRSDet( int datum, int init )
 		qpkcnt = maxder = lastmax = count = sbpeak = 0 ;
 		initBlank = initMax = preBlankCnt = DDPtr = 0 ;
 		sbcount = MS1500 ;
-		QRSFilter(0,1) ;	/* initialize filters. */
+		filt.QRSFilter(0) ;	/* initialize filters. */
 		Peak(0,1) ;
 		}
 
-	fdatum = QRSFilter(datum,0) ;	/* Filter data. */
+	fdatum = filt.QRSFilter(datum) ;	/* Filter data. */
 
 
 	/* Wait until normal detector is ready before calling early detections. */
@@ -167,7 +157,7 @@ int QRSDet( int datum, int init )
 	/* Save derivative of raw signal for T-wave and baseline
 	   shift discrimination. */
 	
-	DDBuffer[DDPtr] = deriv1( datum, 0 ) ;
+	DDBuffer[DDPtr] = filt.deriv1( datum, 0) ;
 	if(++DDPtr == DER_DELAY)
 		DDPtr = 0 ;
 

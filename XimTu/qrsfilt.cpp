@@ -34,15 +34,18 @@ MA 02143 USA).  For updates to this software, please visit our website
 		5/13: Filter implementations have been modified to allow simplified
 			modification for different sample rates.
 *******************************************************************************/
+#include "qrsfilt.hpp"
 #include <math.h>
 #include <stdlib.h>
 #include "qrsdet.h"
-// Local Prototypes.
-int lpfilt( int datum ,int init) ;
-int hpfilt( int datum, int init ) ;
-int deriv1( int x0, int init ) ;
-int deriv2( int x0, int init ) ;
-int mvwint(int datum, int init) ;
+
+QrsFilt::QrsFilt() {
+	lpfilt( 0, 1 ) ;
+	hpfilt( 0, 1 ) ;
+	deriv1( 0, 1 ) ;
+	deriv2( 0, 1 ) ;
+	mvwint( 0, 1 ) ;
+}
 /******************************************************************************
 * Syntax:
 *	int QRSFilter(int datum, int init) ;
@@ -57,24 +60,15 @@ int mvwint(int datum, int init) ;
 *	The filter buffers and static variables are reset if a value other than
 *	0 is passed to QRSFilter through init.
 *******************************************************************************/
-int QRSFilter(int datum,int init)
-	{
+int QrsFilt::QRSFilter(int datum) {
 	int fdatum ;
-	if(init)
-		{
-		hpfilt( 0, 1 ) ;		// Initialize filters.
-		lpfilt( 0, 1 ) ;
-		mvwint( 0, 1 ) ;
-		deriv1( 0, 1 ) ;
-		deriv2( 0, 1 ) ;
-		}
 	fdatum = lpfilt( datum, 0 ) ;		// Low pass filter data.
 	fdatum = hpfilt( fdatum, 0 ) ;	// High pass filter data.
 	fdatum = deriv2( fdatum, 0 ) ;	// Take the derivative.
 	fdatum = labs(fdatum) ;				// Take the absolute value.
 	fdatum = mvwint( fdatum, 0 ) ;	// Average over an 80 ms window .
 	return(fdatum) ;
-	}
+}
 
 /*************************************************************************
 *  lpfilt() implements the digital filter represented by the difference
@@ -85,7 +79,7 @@ int QRSFilter(int datum,int init)
 *	Note that the filter delay is (LPBUFFER_LGTH/2)-1
 *
 **************************************************************************/
-int lpfilt( int datum ,int init)
+int QrsFilt::lpfilt( int datum ,int init)
 	{
 	static long y1 = 0, y2 = 0 ;
 	static int data[LPBUFFER_LGTH], ptr = 0 ;
@@ -120,7 +114,7 @@ int lpfilt( int datum ,int init)
 *
 *  Filter delay is (HPBUFFER_LGTH-1)/2
 ******************************************************************************/
-int hpfilt( int datum, int init )
+int QrsFilt::hpfilt( int datum, int init )
 	{
 	static long y=0 ;
 	static int data[HPBUFFER_LGTH], ptr = 0 ;
@@ -150,7 +144,7 @@ int hpfilt( int datum, int init )
 *
 *  Filter delay is DERIV_LENGTH/2
 *****************************************************************************/
-int deriv1(int x, int init)
+int QrsFilt::deriv1(int x, int init)
 	{
 	static int derBuff[DERIV_LENGTH], derI = 0 ;
 	int y ;
@@ -167,7 +161,8 @@ int deriv1(int x, int init)
 		derI = 0 ;
 	return(y) ;
 	}
-int deriv2(int x, int init)
+
+int QrsFilt::deriv2(int x, int init)
 	{
 	static int derBuff[DERIV_LENGTH], derI = 0 ;
 	int y ;
@@ -190,7 +185,7 @@ int deriv2(int x, int init)
 * mvwint() implements a moving window integrator.  Actually, mvwint() averages
 * the signal values over the last WINDOW_WIDTH samples.
 *****************************************************************************/
-int mvwint(int datum, int init)
+int QrsFilt::mvwint(int datum, int init)
 	{
 	static long sum = 0 ;
 	static int data[WINDOW_WIDTH], ptr = 0 ;

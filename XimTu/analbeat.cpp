@@ -33,7 +33,7 @@ MA 02143 USA).  For updates to this software, please visit our website
    5/13/2002: Time related constants are tied to BEAT_SAMPLE_RATE in bdac.h.
 
 *****************************************************************************/
-#include "bdac.h"
+#include "bdac.hpp"
 #include <stdio.h>
 #include <stdlib.h>
 

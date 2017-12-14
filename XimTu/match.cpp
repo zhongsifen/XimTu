@@ -79,7 +79,7 @@ some level of encapsulation:
 #include <stdio.h>
 #include <wfdb/ecgcodes.h>
 
-#include "bdac.h"
+#include "bdac.hpp"
 #define MATCH_LENGTH	BEAT_MS300	// Number of points used for beat matching.
 #define MATCH_LIMIT	1.2			// Match limit used testing whether two
 											// beat types might be combined.

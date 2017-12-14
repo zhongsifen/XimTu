@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8C79A9A21FD3B17A0060B19F /* bdac.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C79A98E1FD3B17A0060B19F /* bdac.h */; };
+		8C79A9A21FD3B17A0060B19F /* bdac.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 8C79A98E1FD3B17A0060B19F /* bdac.hpp */; };
 		8C79A9A81FD3B17A0060B19F /* rythmchk.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C79A9941FD3B17A0060B19F /* rythmchk.h */; };
 		8C79A9AB1FD3B17A0060B19F /* postclas.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C79A9971FD3B17A0060B19F /* postclas.h */; };
 		8C79A9AC1FD3B17A0060B19F /* match.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C79A9981FD3B17A0060B19F /* match.h */; };
@@ -41,10 +41,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8C3414631FE27A960040C86C /* qrsfilt.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = qrsfilt.hpp; sourceTree = "<group>"; };
 		8C79A9831FD3B0330060B19F /* libXimTu.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libXimTu.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C79A98B1FD3B17A0060B19F /* postclas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = postclas.cpp; sourceTree = "<group>"; };
 		8C79A98C1FD3B17A0060B19F /* match.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = match.cpp; sourceTree = "<group>"; };
-		8C79A98E1FD3B17A0060B19F /* bdac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bdac.h; sourceTree = "<group>"; };
+		8C79A98E1FD3B17A0060B19F /* bdac.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = bdac.hpp; sourceTree = "<group>"; };
 		8C79A98F1FD3B17A0060B19F /* qrsdet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = qrsdet.cpp; sourceTree = "<group>"; };
 		8C79A9921FD3B17A0060B19F /* noisechk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = noisechk.cpp; sourceTree = "<group>"; };
 		8C79A9931FD3B17A0060B19F /* classify.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = classify.cpp; sourceTree = "<group>"; };
@@ -107,22 +108,23 @@
 		8C79A98A1FD3B17A0060B19F /* XimTu */ = {
 			isa = PBXGroup;
 			children = (
+				8C79A98E1FD3B17A0060B19F /* bdac.hpp */,
+				8C79A9961FD3B17A0060B19F /* bdac.cpp */,
+				8C79A99B1FD3B17A0060B19F /* qrsdet.h */,
+				8C79A9991FD3B17A0060B19F /* qrsfilt.cpp */,
+				8C79A98F1FD3B17A0060B19F /* qrsdet.cpp */,
+				8C79A99A1FD3B17A0060B19F /* qrsdet2.cpp */,
 				8C79A98B1FD3B17A0060B19F /* postclas.cpp */,
 				8C79A98C1FD3B17A0060B19F /* match.cpp */,
-				8C79A98E1FD3B17A0060B19F /* bdac.h */,
-				8C79A98F1FD3B17A0060B19F /* qrsdet.cpp */,
 				8C79A9921FD3B17A0060B19F /* noisechk.cpp */,
 				8C79A9931FD3B17A0060B19F /* classify.cpp */,
 				8C79A9941FD3B17A0060B19F /* rythmchk.h */,
 				8C79A9951FD3B17A0060B19F /* analbeat.cpp */,
-				8C79A9961FD3B17A0060B19F /* bdac.cpp */,
 				8C79A9971FD3B17A0060B19F /* postclas.h */,
 				8C79A9981FD3B17A0060B19F /* match.h */,
-				8C79A9991FD3B17A0060B19F /* qrsfilt.cpp */,
-				8C79A99A1FD3B17A0060B19F /* qrsdet2.cpp */,
-				8C79A99B1FD3B17A0060B19F /* qrsdet.h */,
 				8C79A99C1FD3B17A0060B19F /* analbeat.h */,
 				8C79A99E1FD3B17A0060B19F /* rythmchk.cpp */,
+				8C3414631FE27A960040C86C /* qrsfilt.hpp */,
 			);
 			path = XimTu;
 			sourceTree = "<group>";
@@ -153,7 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C79A9A81FD3B17A0060B19F /* rythmchk.h in Headers */,
-				8C79A9A21FD3B17A0060B19F /* bdac.h in Headers */,
+				8C79A9A21FD3B17A0060B19F /* bdac.hpp in Headers */,
 				8C79A9AC1FD3B17A0060B19F /* match.h in Headers */,
 				8C79A9AB1FD3B17A0060B19F /* postclas.h in Headers */,
 				8C79A9B01FD3B17A0060B19F /* analbeat.h in Headers */,

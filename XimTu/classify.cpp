@@ -61,7 +61,7 @@ MA 02143 USA).  For updates to this software, please visit our website
 #include <stdlib.h>	// For abs()
 #include <stdio.h>
 #include "qrsdet.h"	// For base sample rate.
-#include "bdac.h"
+#include "bdac.hpp"
 #include "match.h"
 #include "rythmchk.h"
 #include "analbeat.h"

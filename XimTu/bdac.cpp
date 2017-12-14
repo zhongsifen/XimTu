@@ -55,7 +55,7 @@ Functions in bdac.cpp require functions in the following files:
 
 *******************************************************************************/
 #include "qrsdet.h"	// For base SAMPLE_RATE
-#include "bdac.h"
+#include "bdac.hpp"
 
 #define ECG_BUFFER_LENGTH	1000	// Should be long enough for a beat
 											// plus extra space to accommodate
