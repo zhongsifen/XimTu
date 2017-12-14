@@ -76,10 +76,11 @@ This file must be linked with object files produced from:
 
 #include "inputs.hpp"	/* list of records to analyze and definitions of
 			   ECG_DB_PATH and REC_COUNT */
+#include "bdac.hpp"
 
 // External function prototypes.
-void ResetBDAC(void) ;
-int BeatDetectAndClassify(int ecgSample, int *beatType, int *beatMatch) ;
+//void ResetBDAC(void) ;
+//int BeatDetectAndClassify(int ecgSample, int *beatType, int *beatMatch) ;
 
 // Local Prototypes.
 int  NextSample(int *vout,int nosig,int ifreq,
@@ -90,8 +91,7 @@ int gcd(int x, int y);
 
 int ADCZero, ADCUnit, InputFileSampleFrequency ;
 
-void easytest()
-	{
+void easytest()	{
 	char record[10], fname[20] ;
 	int i, ecg[2], delay, recNum ;
 	WFDB_Siginfo s[2] ;
@@ -107,6 +107,8 @@ void easytest()
 
 	setwfdb(ECG_DB_PATH) ;
 
+	Bdac bdac;
+	
 	// Analyze all 48 MIT/BIH Records.
 
 	for(recNum = 0; recNum < REC_COUNT; ++recNum)
@@ -139,7 +141,7 @@ void easytest()
 
 		// Initialize beat detection and classification.
 
-		ResetBDAC() ;
+		bdac.ResetBDAC() ;
 		SampleCount = 0 ;
 
 		// Read data from MIT/BIH file until there is none left.
@@ -155,7 +157,7 @@ void easytest()
 
 			// Pass sample to beat detection and classification.
 
-			delay = BeatDetectAndClassify(ecg[0], &beatType, &beatMatch) ;
+			delay = bdac.BeatDetectAndClassify(ecg[0], &beatType, &beatMatch) ;
 
 			// If a beat was detected, annotate the beat location
 			// and type.
