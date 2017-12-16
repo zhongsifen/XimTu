@@ -54,7 +54,10 @@ MA 02143 USA).  For updates to this software, please visit our website
 #define MAXTYPES 8
 #define FIDMARK BEAT_MS400
 
+#include "qrsdet.hpp"
+
 class Bdac {
+	QrsDet det;
 
 public:
 	Bdac();

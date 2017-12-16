@@ -68,7 +68,7 @@ Functions in bdac.cpp require functions in the following files:
 
 // External function prototypes.
 
-int QRSDet( int datum, int init );
+//int QRSDet( int datum, int init );
 int NoiseCheck(int datum, int delay, int RR, int beatBegin, int beatEnd);
 int Classify(int *newBeat,int rr, int noiseLevel, int *beatMatch, int *fidAdj, int init);
 int GetDominantType(void);
@@ -103,11 +103,11 @@ Bdac::Bdac() {
 
 void Bdac::ResetBDAC() {
 	int dummy;
-	QRSDet(0,1);	// Reset the qrs detector
+	det.reset();		// Reset the qrs detector
 	RRCount = 0;
 	Classify(BeatBuffer,0,0,&dummy,&dummy,1);
 	InitBeatFlag = 1;
-   BeatQueCount = 0;	// Flush the beat que.
+	BeatQueCount = 0;	// Flush the beat que.
 }
 
 /*****************************************************************************
@@ -150,7 +150,7 @@ int Bdac::BeatDetectAndClassify(int ecgSample, int *beatType, int *beatMatch) {
 
 	// Run the sample through the QRS detector.
 
-	detectDelay = QRSDet(ecgSample,0);
+	detectDelay = det.detect(ecgSample);
 	if(detectDelay != 0)
 		{
 		BeatQue[BeatQueCount] = detectDelay;

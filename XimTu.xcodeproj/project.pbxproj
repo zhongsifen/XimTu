@@ -42,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		8C3414631FE27A960040C86C /* qrsfilt.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = qrsfilt.hpp; sourceTree = "<group>"; };
+		8C3414641FE2DBB80040C86C /* qrsdet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = qrsdet.hpp; sourceTree = "<group>"; };
 		8C79A9831FD3B0330060B19F /* libXimTu.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libXimTu.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C79A98B1FD3B17A0060B19F /* postclas.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = postclas.cpp; sourceTree = "<group>"; };
 		8C79A98C1FD3B17A0060B19F /* match.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = match.cpp; sourceTree = "<group>"; };
@@ -110,8 +111,9 @@
 			children = (
 				8C79A98E1FD3B17A0060B19F /* bdac.hpp */,
 				8C79A9961FD3B17A0060B19F /* bdac.cpp */,
-				8C79A99B1FD3B17A0060B19F /* samplerate.hpp */,
+				8C3414631FE27A960040C86C /* qrsfilt.hpp */,
 				8C79A9991FD3B17A0060B19F /* qrsfilt.cpp */,
+				8C3414641FE2DBB80040C86C /* qrsdet.hpp */,
 				8C79A98F1FD3B17A0060B19F /* qrsdet.cpp */,
 				8C79A99A1FD3B17A0060B19F /* qrsdet2.cpp */,
 				8C79A98B1FD3B17A0060B19F /* postclas.cpp */,
@@ -124,7 +126,7 @@
 				8C79A9981FD3B17A0060B19F /* match.h */,
 				8C79A99C1FD3B17A0060B19F /* analbeat.h */,
 				8C79A99E1FD3B17A0060B19F /* rythmchk.cpp */,
-				8C3414631FE27A960040C86C /* qrsfilt.hpp */,
+				8C79A99B1FD3B17A0060B19F /* samplerate.hpp */,
 			);
 			path = XimTu;
 			sourceTree = "<group>";
