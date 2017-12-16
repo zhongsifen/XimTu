@@ -57,9 +57,9 @@ MA 02143 USA).  For updates to this software, please visit our website
 
 *******************************************************************************/
 
-#include <wfdb/ecgcodes.h>
 #include <stdlib.h>	// For abs()
 #include <stdio.h>
+#include "ecgcodes.h"
 #include "qrsdet.h"	// For base sample rate.
 #include "bdac.h"
 #include "match.h"
@@ -340,7 +340,7 @@ int Classify(int *newBeat,int rr, int noiseLevel, int *beatMatch, int *fidAdj,
 	*beatMatch = morphType ;
 
 	beatClass = GetBeatClass(morphType) ;
-   
+
 	// If the morphology has been previously classified.
 	// use that classification.
   //	return(rhythmClass) ;
@@ -773,10 +773,9 @@ void CombineDomData(int oldType, int newType)
 	in a row.
 ***********************************************************************/
 
-GetRunCount()
+int GetRunCount()
 	{
 	int i ;
 	for(i = 1; (i < 8) && (RecentTypes[0] == RecentTypes[i]); ++i) ;
 	return(i) ;
 	}
-

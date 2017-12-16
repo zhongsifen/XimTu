@@ -54,6 +54,8 @@ Functions in bdac.cpp require functions in the following files:
          and BEAT_SAMPLE_RATE in bcac.h.
 
 *******************************************************************************/
+#include <stdlib.h>
+
 #include "qrsdet.h"	// For base SAMPLE_RATE
 #include "bdac.h"
 

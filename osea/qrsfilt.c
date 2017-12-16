@@ -35,6 +35,8 @@ MA 02143 USA).  For updates to this software, please visit our website
 			modification for different sample rates.
 *******************************************************************************/
 #include <math.h>
+#include <stdlib.h>
+
 #include "qrsdet.h"
 // Local Prototypes.
 int lpfilt( int datum ,int init) ;

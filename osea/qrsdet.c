@@ -64,6 +64,7 @@ Returns:
 #endif
 
 #include <math.h>
+#include <stdlib.h>
 #include "qrsdet.h"
 #define PRE_BLANK	MS200
 
@@ -100,7 +101,7 @@ int QRSDet( int datum, int init )
 	static int maxder, lastmax ;
 	static int initBlank, initMax ;
 	static int preBlankCnt, tempPeak ;
-	
+
 	int fdatum, QrsDelay = 0 ;
 	int i, newPeak, aPeak ;
 
@@ -165,7 +166,7 @@ int QRSDet( int datum, int init )
 
 	/* Save derivative of raw signal for T-wave and baseline
 	   shift discrimination. */
-	
+
 	DDBuffer[DDPtr] = deriv1( datum, 0 ) ;
 	if(++DDPtr == DER_DELAY)
 		DDPtr = 0 ;
@@ -201,12 +202,12 @@ int QRSDet( int datum, int init )
 		++count ;
 		if(newPeak > 0)
 			{
-			
-			
+
+
 			/* Check for maximum derivative and matching minima and maxima
 			   for T-wave and baseline shift rejection.  Only consider this
 			   peak if it doesn't seem to be a base line shift. */
-			   
+
 			if(!BLSCheck(DDBuffer, DDPtr, &maxder))
 				{
 
@@ -259,7 +260,7 @@ int QRSDet( int datum, int init )
 					}
 				}
 			}
-		
+
 		/* Test for search back condition.  If a QRS is found in  */
 		/* search back update the QRS buffer and det_thresh.      */
 
@@ -322,7 +323,7 @@ int QRSDet( int datum, int init )
 
 /**************************************************************
 * peak() takes a datum as input and returns a peak height
-* when the signal returns to half its peak height, or 
+* when the signal returns to half its peak height, or
 **************************************************************/
 
 int Peak( int datum, int init )
@@ -332,7 +333,7 @@ int Peak( int datum, int init )
 
 	if(init)
 		max = timeSinceMax = 0 ;
-		
+
 	if(timeSinceMax > 0)
 		++timeSinceMax ;
 
@@ -424,7 +425,7 @@ int BLSCheck(int *dBuf,int dbPtr,int *maxder)
 	max = min = 0 ;
 
 	return(0) ;
-	
+
 	for(t = 0; t < MS220; ++t)
 		{
 		x = dBuf[dbPtr] ;
@@ -444,16 +445,14 @@ int BLSCheck(int *dBuf,int dbPtr,int *maxder)
 
 	*maxder = max ;
 	min = -min ;
-	
+
 	/* Possible beat if a maximum and minimum pair are found
 		where the interval between them is less than 150 ms. */
-	   
+
 	if((max > (min>>3)) && (min > (max>>3)) &&
 		(abs(maxt - mint) < MS150))
 		return(0) ;
-		
+
 	else
 		return(1) ;
 	}
-
-
